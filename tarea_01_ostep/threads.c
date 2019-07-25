@@ -37,16 +37,8 @@ void *worker(void *arg) {
 int main(int argc, char *argv[]) {
     clock_t time1, time2;
     double secs;
-    time1 = clock();
-    time2 =clock();
-
-    secs = (double)(time2 - time1) / CLOCKS_PER_SEC;
-
-    
-
-    
-
-    printf(" el tiempo es: %f\n", secs);
+   time1 = clock();
+   
     
  
     
@@ -74,6 +66,10 @@ int main(int argc, char *argv[]) {
     Pthread_join(p1, NULL);
     Pthread_join(p2, NULL);
     printf("Final value   : %d\n", counter);
+    time2 =clock();
+    secs = (double)(time2 - time1) / CLOCKS_PER_SEC;
+    printf(" el tiempo es: %f\n", secs);
+
     return 0;
     
     
